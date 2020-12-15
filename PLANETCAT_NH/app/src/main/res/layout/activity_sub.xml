@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPlanetBlue">
+
+
+    <!-- It's Title -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:src="@color/colorPlanetGray" />
+
+        <TextView
+            android:layout_width="131dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:text="@string/project_title"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp">
+
+        <TextView
+            android:id="@+id/txt_id1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="71dp"
+            android:layout_marginTop="10dp"
+            android:text="I     D : "
+            android:textColor="@color/colorPlanetGray"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edt_id1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/txt_id1"
+            android:layout_toRightOf="@+id/txt_id1"
+            android:layout_marginRight="70dp"/>
+
+        <TextView
+            android:id="@+id/txt_pwd1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_id1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="27dp"
+            android:text="PWD : "
+            android:textColor="@color/colorPlanetGray"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edt_pwd1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txt_pwd1"
+            android:layout_below="@+id/edt_id1"
+            android:layout_marginRight="70dp"/>
+
+        <!--날짜 부분입니다.-->
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_pwd1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="27dp"
+            android:text="날짜 : "
+            android:textColor="@color/colorPlanetGray"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/date1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_pwd1"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="70dp"
+            android:layout_toRightOf="@+id/txt_pwd1"
+            android:textColor="@color/colorPlanetGray"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/txt1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="27dp">
+
+            <RadioButton
+                android:id="@+id/lscd1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="농협은행"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:onClick="event_lscd"
+                />
+            <RadioButton
+                android:id="@+id/lscd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="농협상호금융"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:onClick="event_lscd"
+                />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_signup1"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/edt_pwd1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="150dp"
+            android:text="SIGN UP"
+            android:textSize="5pt"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/corner_button"/>
+
+        <Button
+            android:id="@+id/btn_signin1"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/edt_pwd1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="50dp"
+            android:layout_toRightOf="@+id/btn_signup1"
+            android:background="@drawable/corner_button"
+            android:text="SIGN IN"
+            android:textColor="@color/colorWhite"
+            android:textSize="5pt"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</LinearLayout>

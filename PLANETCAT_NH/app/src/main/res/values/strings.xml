@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PLANETCAT_NH2</string>
+    <string name="project_title">PLANETCAT</string>
+    <string name="project_key">1359eaae22b5c2625ceeb1e66a7f71f8db11ee1e09890a21c852f7631d5d3039</string>
+    <string name="acno">3020000002639</string>
+    <string name="mybirth">19950610</string>
+    <string name="bncd1">011</string>
+    <string name="bncd2">012</string>
+    <string name="lscd">000629</string>
+</resources>
