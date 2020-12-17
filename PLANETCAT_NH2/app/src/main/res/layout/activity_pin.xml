@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue">
+
+    <!--It's POST PIN Page -->
+
+    <!-- It's Title -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:src="@color/colorPlanetGray" />
+
+        <TextView
+            android:layout_width="131dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:text="@string/project_title"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Access PinNumber"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/corner_button"
+        android:onClick="event_Pin"/>
+
+    <TextView
+        android:id="@+id/logs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:textAlignment="center"
+        android:text="logs this view"/>
+
+    <TextView
+        android:id="@+id/pinnumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:text="PinNumber this view"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Confirm PinNumber"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/corner_button"
+        android:onClick="confirm_Pin"/>
+
+    <TextView
+        android:id="@+id/logs2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:textAlignment="center"
+        android:text="Confirm logs"/>
+
+    <TextView
+        android:id="@+id/confirmPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:text="Confirm Pin Number"/>
+
+
+</LinearLayout>
