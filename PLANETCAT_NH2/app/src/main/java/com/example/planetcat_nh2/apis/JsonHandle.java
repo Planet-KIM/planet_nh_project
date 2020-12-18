@@ -1,6 +1,7 @@
 package com.example.planetcat_nh2.apis;
 import com.example.planetcat_nh2.models.ConfirmPin;
 import com.example.planetcat_nh2.models.InquireDepositor;
+import com.example.planetcat_nh2.models.InquireDepositor_Other;
 import com.example.planetcat_nh2.models.PinItem;
 import com.example.planetcat_nh2.models.PinItem2;
 import com.example.planetcat_nh2.models.PostItem;
@@ -38,7 +39,7 @@ public interface JsonHandle {
     // 타행 예금주 확인
     @Headers("Content-Type: application/json; charset=UTF-8")
     @POST("/InquireDepositorOtherBank.nh")
-    Call<PostItem> postDepositorOtherBank(@FieldMap HashMap<String, Object> params);
+    Call<InquireDepositor_Other> postDepositorOtherBank(@Body InquireDepositor_Other inquireDepositor_other);
     
     @Headers("Content-Type: application/json; charset=UTF-8")
     @POST("/user/login")
