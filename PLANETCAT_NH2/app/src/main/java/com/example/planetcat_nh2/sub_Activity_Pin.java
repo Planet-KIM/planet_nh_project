@@ -136,8 +136,15 @@ public class sub_Activity_Pin extends AppCompatActivity {
                 "000629", "001", "DrawingTransferA", randomNum
                 ,"1359eaae22b5c2625ceeb1e66a7f71f8db11ee1e09890a21c852f7631d5d3039");
 
-        ConfirmPin item = new ConfirmPin(header, pinnumber.getText().toString(), "19950610");
 
+        String pinnumberText = pinnumber.getText().toString();
+        ConfirmPin item = new ConfirmPin(header, pinnumberText, "19950610");
+
+        // pin이 이미 존재하면 프로그램이 더이상 실행을 할 필요가 없습니다.
+        if(pinnumberText  == ""){
+            confirmPin.setText("핀이 중복되어 있습니다.");
+            return;
+        }
         Call<ConfirmPin> call = jsonHandle.postPinAccountConfirm(item);
         call.enqueue(new Callback<ConfirmPin>() {
             @Override

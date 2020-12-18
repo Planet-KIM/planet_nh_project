@@ -1,5 +1,6 @@
 package com.example.planetcat_nh2.apis;
 import com.example.planetcat_nh2.models.ConfirmPin;
+import com.example.planetcat_nh2.models.InquireDepositor;
 import com.example.planetcat_nh2.models.PinItem;
 import com.example.planetcat_nh2.models.PinItem2;
 import com.example.planetcat_nh2.models.PostItem;
@@ -32,7 +33,7 @@ public interface JsonHandle {
     // 예금주 확인
     @Headers("Content-Type: application/json; charset=UTF-8")
     @POST("/InquireDepositorAccountNumber.nh")
-    Call<PostItem> postDespoitorAccNum(@FieldMap HashMap<String, Object> params);
+    Call<InquireDepositor> postDespoitorAccNum(@Body InquireDepositor inquireDepositor);
 
     // 타행 예금주 확인
     @Headers("Content-Type: application/json; charset=UTF-8")
