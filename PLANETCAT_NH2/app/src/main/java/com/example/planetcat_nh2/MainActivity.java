@@ -38,4 +38,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), sub_Activity_Pin.class);
         startActivity(intent);
     }
+
+    public void makePin(View view) {
+        Intent intent = new Intent(getApplicationContext(), sub_Activity_PinAccess.class);
+        startActivity(intent);
+    }
 }

@@ -30,13 +30,27 @@
 
     <Button
         android:id="@+id/btn_main"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/corner_button"
-        android:text="input"
+        android:text="pin_test"
         android:textColor="@color/colorWhite"
         android:textStyle="bold"
         android:layout_marginTop="300dp"
         android:onClick="access_Pin_page"/>
+
+    <Button
+        android:id="@+id/btn_access_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/corner_button"
+        android:text="PIN_ACCESS"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:onClick="makePin"/>
+
+
 </LinearLayout>

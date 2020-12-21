@@ -43,6 +43,7 @@
             android:layout_marginTop="20dp"/>
 
         <EditText
+            android:id="@+id/birthPic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorWhite"
@@ -80,7 +81,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@+id/txt1"
@@ -106,6 +107,23 @@
             android:textColor="@color/colorWhite"
             android:onClick="event_lscd"
             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:text="Access PinNum"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/corner_button"/>
     </LinearLayout>
 
 
