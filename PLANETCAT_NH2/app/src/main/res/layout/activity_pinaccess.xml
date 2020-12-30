@@ -51,7 +51,8 @@
             android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="100dp"/>
+            android:layout_marginRight="100dp"
+            android:onClick="dateSelect"/>
     </LinearLayout>
 
 
@@ -123,7 +124,8 @@
             android:textStyle="bold"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:background="@drawable/corner_button"/>
+            android:background="@drawable/corner_button"
+            android:onClick="event_Access_Pinpage"/>
     </LinearLayout>
 
 
