@@ -74,6 +74,7 @@ public class sub_Activity_Pin extends AppCompatActivity {
         String randomNum = String.valueOf((int)(Math.random() * 100000));
         Log.d("random", randomNum);
 
+        // 밑의 값들을 전부 데이터베이스에 저장해두어야합니다.
         Header header = new Header("OpenFinAccountDirect", getTime, "112428",
                 "000629", "001", "DrawingTransferA", randomNum
                 ,"1359eaae22b5c2625ceeb1e66a7f71f8db11ee1e09890a21c852f7631d5d3039");

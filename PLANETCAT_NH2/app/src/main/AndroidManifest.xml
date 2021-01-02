@@ -22,7 +22,8 @@
         </activity>
         <activity android:name=".sub_Activity_Pin" android:label="sub_Activity_Pin"></activity>
         <activity android:name=".sub_Activity_Sql" android:label="sub_Acitivity_Sql"></activity>
-        <activity android:name=".sub_Activity_PinAccess"  android:label="sub_Activity_PinAccess"></activity>
+        <activity android:name=".sub_Activity_PinAccess" android:label="sub_Activity_PinAccess"></activity>
+        <activity android:name=".sub_Activity_Login" android:label="sub_Activity_Login"></activity>
     </application>
 
 </manifest>

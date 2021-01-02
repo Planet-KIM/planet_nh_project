@@ -3,6 +3,7 @@ import com.example.planetcat_nh2.models.ConfirmPin;
 import com.example.planetcat_nh2.models.DrawingTransfer;
 import com.example.planetcat_nh2.models.InquireDepositor;
 import com.example.planetcat_nh2.models.InquireDepositor_Other;
+import com.example.planetcat_nh2.models.Login;
 import com.example.planetcat_nh2.models.PinItem;
 import com.example.planetcat_nh2.models.PinItem2;
 import com.example.planetcat_nh2.models.PostItem;
@@ -47,16 +48,15 @@ public interface JsonHandle {
     // 출금 이체 - 고객계좌에서 핀테크 기업 약정계좌로 핀-어카운트를 이용하여 출금
     @Headers("Content-Type: application/json; charset=UTF-8")
     @POST("/DrawingTransfer.nh")
-    Call<DrawingTransfer> DrawingTransfer(@Body DrawingTransfer drawingTransfer);
+    Call<DrawingTransfer> drawingTransfer(@Body DrawingTransfer drawingTransfer);
 
 
     @Headers("Content-Type: application/json; charset=UTF-8")
     @POST("/ReceivedTransferAccountNumber.nh")
-    Call<ReceivedTransferAccountNumber> ReceivedTransferAccountNumber(@Body ReceivedTransferAccountNumber receivedTransferAccountNumber);
+    Call<ReceivedTransferAccountNumber> receivedTransferAccountNumber(@Body ReceivedTransferAccountNumber receivedTransferAccountNumber);
 
-    @Headers("Content-Type: application/json; charset=UTF-8")
+    // 서버에 로그인 하기위한 영역
+    //@Headers("charset=UTF-8;")
     @POST("/user/login")
-    Call<PostItem> login(
-            @Field("name") String name,
-            @Field("password") String password);
+    Call<Login> login(@Body Login login);
 }

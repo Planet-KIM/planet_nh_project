@@ -5,6 +5,8 @@ import com.google.gson.annotations.SerializedName;
 import org.json.JSONObject;
 
 public class PinItem2 {
+
+    // Response할 값을 가져오는 부분입니다.
     @SerializedName("Rgno")
     private String Rgno;
 
@@ -48,6 +50,7 @@ public class PinItem2 {
         return Acno;
     }
 
+    // Request할 값을 해주는 것입니다.
     public PinItem2(Header Header, String DrtrRgyn, String BrdtBrno, String Bncd, String Acno){
         this.Header = Header;
         this.DrtrRgyn = DrtrRgyn;

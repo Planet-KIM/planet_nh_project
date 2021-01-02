@@ -52,5 +52,17 @@
         android:layout_marginTop="20dp"
         android:onClick="makePin"/>
 
+    <Button
+        android:id="@+id/btn_Login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/corner_button"
+        android:text="USER SIGN IN"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:onClick="access_Login_page"/>
+
 
 </LinearLayout>

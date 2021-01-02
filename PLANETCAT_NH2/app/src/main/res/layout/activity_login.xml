@@ -158,7 +158,8 @@
             android:text="SIGN IN"
             android:textColor="@color/colorWhite"
             android:textSize="4pt"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:onClick="signIn"/>
     </RelativeLayout>
 
 </LinearLayout>

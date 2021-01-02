@@ -23,8 +23,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     private Button btn_main;
-    private Button btn_signup;
-    private Button btn_signin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void makePin(View view) {
         Intent intent = new Intent(getApplicationContext(), sub_Activity_PinAccess.class);
+        startActivity(intent);
+    }
+
+    public void access_Login_page(View view) {
+        Toast.makeText(getApplicationContext(), "Access Login Page", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), sub_Activity_Login.class);
         startActivity(intent);
     }
 }
