@@ -8,6 +8,7 @@ import com.example.planetcat_nh2.models.PinItem;
 import com.example.planetcat_nh2.models.PinItem2;
 import com.example.planetcat_nh2.models.PostItem;
 import com.example.planetcat_nh2.models.ReceivedTransferAccountNumber;
+import com.example.planetcat_nh2.models.ReceivedTransferOtherBank;
 import com.google.gson.JsonObject;
 
 import org.json.JSONObject;
@@ -54,6 +55,12 @@ public interface JsonHandle {
     @Headers("Content-Type: application/json; charset=UTF-8")
     @POST("/ReceivedTransferAccountNumber.nh")
     Call<ReceivedTransferAccountNumber> receivedTransferAccountNumber(@Body ReceivedTransferAccountNumber receivedTransferAccountNumber);
+
+    @Headers("Content-Type: application/json; charset=UTF-8")
+    @POST("/ReceivedTransferOtherBank.nh")
+    Call<ReceivedTransferOtherBank> receivedTransferOtherBank(@Body ReceivedTransferOtherBank receivedTransferOtherBank);
+
+    @Headers("Content-Type: application/json; charset=UTF-8")
 
     // 서버에 로그인 하기위한 영역
     //@Headers("charset=UTF-8;")
