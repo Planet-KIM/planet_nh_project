@@ -3,6 +3,7 @@ import com.example.planetcat_nh2.models.ConfirmPin;
 import com.example.planetcat_nh2.models.DrawingTransfer;
 import com.example.planetcat_nh2.models.InquireDepositor;
 import com.example.planetcat_nh2.models.InquireDepositor_Other;
+import com.example.planetcat_nh2.models.InquireTransactionHistory;
 import com.example.planetcat_nh2.models.Login;
 import com.example.planetcat_nh2.models.PinItem;
 import com.example.planetcat_nh2.models.PinItem2;
@@ -60,7 +61,10 @@ public interface JsonHandle {
     @POST("/ReceivedTransferOtherBank.nh")
     Call<ReceivedTransferOtherBank> receivedTransferOtherBank(@Body ReceivedTransferOtherBank receivedTransferOtherBank);
 
+    //거래 내역 조회 Handler
     @Headers("Content-Type: application/json; charset=UTF-8")
+    @POST("/InquireTransactionHistory.nh")
+    Call<InquireTransactionHistory> inquireTransactionHistory(@Body InquireTransactionHistory inquireTransactionHistory)
 
     // 서버에 로그인 하기위한 영역
     //@Headers("charset=UTF-8;")
