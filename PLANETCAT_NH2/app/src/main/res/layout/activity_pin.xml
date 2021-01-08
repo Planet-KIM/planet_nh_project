@@ -14,18 +14,19 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="38dp"
+            android:layout_height="50dp"
             android:src="@color/colorPlanetGray" />
 
         <TextView
             android:layout_width="131dp"
-            android:layout_height="38dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:text="@string/project_title"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
     </FrameLayout>
 
     <Button

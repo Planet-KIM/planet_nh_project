@@ -64,10 +64,10 @@ public interface JsonHandle {
     //거래 내역 조회 Handler
     @Headers("Content-Type: application/json; charset=UTF-8")
     @POST("/InquireTransactionHistory.nh")
-    Call<InquireTransactionHistory> inquireTransactionHistory(@Body InquireTransactionHistory inquireTransactionHistory)
+    Call<InquireTransactionHistory> inquireTransactionHistory(@Body InquireTransactionHistory inquireTransactionHistory);
 
     // 서버에 로그인 하기위한 영역
-    //@Headers("charset=UTF-8;")
+    @Headers("Content-Type: application/json; charset=UTF-8;")
     @POST("/user/login")
     Call<Login> login(@Body Login login);
 }

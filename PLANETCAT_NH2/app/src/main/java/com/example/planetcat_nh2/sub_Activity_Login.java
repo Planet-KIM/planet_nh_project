@@ -1,5 +1,7 @@
 package com.example.planetcat_nh2;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,7 +13,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.planetcat_nh2.apis.JsonHandle;
 import com.example.planetcat_nh2.models.Login;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -35,13 +41,27 @@ public class sub_Activity_Login extends AppCompatActivity {
         idText = findViewById(R.id.edt_id1);
         passwordText = findViewById(R.id.edt_pwd1);
 
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+
         // REST API를 사용하기 위한 초기화 작업
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(LoginUrl)
+                .client(createOkHttpClient())
                 .addConverterFactory(ScalarsConverterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
         jsonHandle = retrofit.create(JsonHandle.class);
+    }
+
+    private static OkHttpClient createOkHttpClient(){
+
+        OkHttpClient.Builder builder = new OkHttpClient.Builder();
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        builder.addInterceptor(interceptor);
+        return builder.build();
     }
 
 
@@ -59,21 +79,33 @@ public class sub_Activity_Login extends AppCompatActivity {
                 // 응답을 실패했을 경우에는...
                 if (!response.isSuccessful()){
                     // 실패 메세지 띄우기
-                    Toast.makeText(getApplicationContext(), "Login Fail : response = " + response.code(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Login Fail : response = " + response.code(), Toast.LENGTH_LONG).show();
                     // 실패했으니 안의 내용 초기화
                     idText.setText("");
                     passwordText.setText("");
                 }
                 // 응답에 성공했을 때....
                 else{
-                    Toast.makeText(getApplicationContext(), "Login Success : code = " + response.code(), Toast.LENGTH_SHORT).show();
+
+                    Login login = response.body();
+                    String checked = String.valueOf(login.getChecked());
+
+                    if(checked == "true"){
+                        Toast.makeText(getApplicationContext(), "SIGN IN SUCCESS", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), sub_Activity_Pin.class);
+                        startActivity(intent);
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(), "Login Fail : \n" + "아이디나 비밀번호가 틀렸습니다.\n", Toast.LENGTH_LONG).show();
+                        passwordText.setText("");
+                    }
                 }
             }
 
             @Override
             public void onFailure(Call<Login> call, Throwable t) {
                 String message = t.getMessage();
-                Toast.makeText(getApplicationContext(), "Login Failed : message = " + message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Login Failed : message = " + message, Toast.LENGTH_LONG).show();
                 Log.d("restmessage", message);
             }
         });

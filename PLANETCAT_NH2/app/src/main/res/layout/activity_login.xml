@@ -13,18 +13,19 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="38dp"
+            android:layout_height="50dp"
             android:src="@color/colorPlanetGray" />
 
         <TextView
             android:layout_width="131dp"
-            android:layout_height="38dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:text="@string/project_title"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
     </FrameLayout>
 
     <RelativeLayout
@@ -47,7 +48,7 @@
         <EditText
             android:id="@+id/edt_id1"
             android:layout_width="200dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_alignTop="@id/txt_id1"
             android:layout_toRightOf="@+id/txt_id1"
             android:layout_marginRight="70dp"/>
@@ -68,10 +69,12 @@
         <EditText
             android:id="@+id/edt_pwd1"
             android:layout_width="200dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_toRightOf="@+id/txt_pwd1"
             android:layout_below="@+id/edt_id1"
-            android:layout_marginRight="70dp"/>
+            android:layout_marginRight="70dp"
+            android:layout_marginTop="15dp"
+            android:inputType="textPassword"/>
 
         <!--날짜 부분입니다.-->
         <TextView

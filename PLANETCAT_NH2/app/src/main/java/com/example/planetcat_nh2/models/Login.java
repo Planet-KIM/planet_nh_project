@@ -9,9 +9,14 @@ public class Login {
 
     @SerializedName("password")
     private String password;
-    
+
+    @SerializedName("checked")
+    private String checked;
+
     public String getName(){ return name; }
     public String getPassword(){ return password; }
+
+    public String getChecked() { return checked; }
 
     public Login(String name, String password){
         this.name = name;
