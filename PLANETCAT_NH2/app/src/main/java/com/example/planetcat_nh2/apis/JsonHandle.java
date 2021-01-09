@@ -1,6 +1,8 @@
 package com.example.planetcat_nh2.apis;
 import com.example.planetcat_nh2.models.ConfirmPin;
 import com.example.planetcat_nh2.models.DrawingTransfer;
+import com.example.planetcat_nh2.models.InquireBalance;
+import com.example.planetcat_nh2.models.InquireCreditCardAuthorizationHistory;
 import com.example.planetcat_nh2.models.InquireDepositor;
 import com.example.planetcat_nh2.models.InquireDepositor_Other;
 import com.example.planetcat_nh2.models.InquireTransactionHistory;
@@ -65,6 +67,16 @@ public interface JsonHandle {
     @Headers("Content-Type: application/json; charset=UTF-8")
     @POST("/InquireTransactionHistory.nh")
     Call<InquireTransactionHistory> inquireTransactionHistory(@Body InquireTransactionHistory inquireTransactionHistory);
+
+    //핀-어카운트 연결계좌에 대한 잔액을 조회합니다.
+    @Headers("Content-Type: application/json; charset=UTF-8")
+    @POST("/InquireBalance.nh")
+    Call<InquireBalance> inquireBalance(@Body InquireBalance inquireBalance);
+
+    //핀-카드에 연결된 개인카드의 승인내역을 조회한다.
+    @Headers("Content-Type: application/json; charset=UTF-8")
+    @POST("InquireCreditCardAuthorizationHistory.nh")
+    Call<InquireCreditCardAuthorizationHistory> inquireCreditCardAuthorizationHistory(@Body InquireCreditCardAuthorizationHistory inquireCreditCardAuthorizationHistory);
 
     // 서버에 로그인 하기위한 영역
     @Headers("Content-Type: application/json; charset=UTF-8;")
