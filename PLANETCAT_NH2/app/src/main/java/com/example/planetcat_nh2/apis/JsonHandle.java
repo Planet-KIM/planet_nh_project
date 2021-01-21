@@ -5,6 +5,7 @@ import com.example.planetcat_nh2.models.InquireBalance;
 import com.example.planetcat_nh2.models.InquireCreditCardAuthorizationHistory;
 import com.example.planetcat_nh2.models.InquireDepositor;
 import com.example.planetcat_nh2.models.InquireDepositor_Other;
+import com.example.planetcat_nh2.models.InquireExchangeRate;
 import com.example.planetcat_nh2.models.InquireTransactionHistory;
 import com.example.planetcat_nh2.models.Login;
 import com.example.planetcat_nh2.models.PinItem;
@@ -77,6 +78,10 @@ public interface JsonHandle {
     @Headers("Content-Type: application/json; charset=UTF-8")
     @POST("InquireCreditCardAuthorizationHistory.nh")
     Call<InquireCreditCardAuthorizationHistory> inquireCreditCardAuthorizationHistory(@Body InquireCreditCardAuthorizationHistory inquireCreditCardAuthorizationHistory);
+
+    @Headers("Content-Type: application/json; charser=UTF-8")
+    @POST("InquireExchangeRate.nh")
+    Call<InquireExchangeRate> inquireExchangeRate(@Body InquireExchangeRate inquireExchangeRate);
 
     // 서버에 로그인 하기위한 영역
     @Headers("Content-Type: application/json; charset=UTF-8;")
