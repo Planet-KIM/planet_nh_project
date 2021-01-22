@@ -8,6 +8,7 @@ import com.example.planetcat_nh2.models.InquireDepositor_Other;
 import com.example.planetcat_nh2.models.InquireExchangeRate;
 import com.example.planetcat_nh2.models.InquireTransactionHistory;
 import com.example.planetcat_nh2.models.Login;
+import com.example.planetcat_nh2.models.P2PNVirtualAccountNumberRequest;
 import com.example.planetcat_nh2.models.PinItem;
 import com.example.planetcat_nh2.models.PinItem2;
 import com.example.planetcat_nh2.models.PostItem;
@@ -82,6 +83,10 @@ public interface JsonHandle {
     @Headers("Content-Type: application/json; charser=UTF-8")
     @POST("InquireExchangeRate.nh")
     Call<InquireExchangeRate> inquireExchangeRate(@Body InquireExchangeRate inquireExchangeRate);
+
+    @Headers("Content-Type: application/json; charset=UTF-8")
+    @POST("/P2PNVirtualAccountNumberRequest.nh")
+    Call<P2PNVirtualAccountNumberRequest> p2PNVirtualAccountNumberRequest(@Body P2PNVirtualAccountNumberRequest p2PNVirtualAccountNumberRequest);
 
     // 서버에 로그인 하기위한 영역
     @Headers("Content-Type: application/json; charset=UTF-8;")
