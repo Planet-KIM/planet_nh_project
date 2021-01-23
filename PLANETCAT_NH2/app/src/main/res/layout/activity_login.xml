@@ -31,8 +31,10 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="230dp">
+        android:layout_marginTop="260dp">
 
+
+        <!--
         <TextView
             android:id="@+id/txt_id1"
             android:layout_width="wrap_content"
@@ -43,16 +45,23 @@
             android:text="I     D : "
             android:textColor="@color/colorPlanetGray"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:textStyle="bold" />-->
 
         <EditText
             android:id="@+id/edt_id1"
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:layout_alignTop="@id/txt_id1"
-            android:layout_toRightOf="@+id/txt_id1"
-            android:layout_marginRight="70dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/border"
+            android:hint="User Id, Email, Phone-Number"
+            android:textColorHint="@color/colorWhite"
+            android:textColor="@color/colorWhite"
+            android:textSize="13dp"
+            android:gravity="center"
+            />
 
+        <!--
         <TextView
             android:id="@+id/txt_pwd1"
             android:layout_width="wrap_content"
@@ -64,19 +73,26 @@
             android:text="PWD : "
             android:textColor="@color/colorPlanetGray"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:textStyle="bold" />-->
 
         <EditText
             android:id="@+id/edt_pwd1"
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:layout_toRightOf="@+id/txt_pwd1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_below="@+id/edt_id1"
-            android:layout_marginRight="70dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="15dp"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            android:background="@drawable/border"
+            android:textSize="12dp"
+            android:textColor="@color/colorWhite"
+            android:hint="Password"
+            android:textColorHint="@color/colorWhite"
+            android:gravity="center"/>
 
-        <!--날짜 부분입니다.-->
+
+        <!--날짜 부분입니다.
         <TextView
             android:id="@+id/txt_date1"
             android:layout_width="wrap_content"
@@ -88,8 +104,9 @@
             android:text="날짜 : "
             android:textColor="@color/colorPlanetGray"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:textStyle="bold" /> -->
 
+        <!--
         <TextView
             android:id="@+id/date1"
             android:layout_width="200dp"
@@ -100,8 +117,8 @@
             android:layout_marginRight="70dp"
             android:layout_toRightOf="@+id/txt_pwd1"
             android:textColor="@color/colorPlanetGray"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold"/>-->
+
 
         <!--
         <LinearLayout
@@ -137,11 +154,11 @@
 
         <Button
             android:id="@+id/btn_signup1"
-            android:layout_width="60dp"
+            android:layout_width="100dp"
             android:layout_height="50dp"
-            android:layout_below="@+id/txt_date1"
+            android:layout_below="@+id/edt_pwd1"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="150dp"
+            android:layout_marginLeft="100dp"
             android:text="SIGN UP"
             android:textSize="4pt"
             android:textStyle="bold"
@@ -150,9 +167,9 @@
 
         <Button
             android:id="@+id/btn_signin1"
-            android:layout_width="60dp"
+            android:layout_width="100dp"
             android:layout_height="50dp"
-            android:layout_below="@+id/txt_date1"
+            android:layout_below="@+id/edt_pwd1"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="12dp"
             android:layout_marginRight="50dp"
