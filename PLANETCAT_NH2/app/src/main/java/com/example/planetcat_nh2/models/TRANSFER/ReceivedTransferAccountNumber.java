@@ -1,5 +1,6 @@
-package com.example.planetcat_nh2.models;
+package com.example.planetcat_nh2.models.TRANSFER;
 
+import com.example.planetcat_nh2.models.Header;
 import com.google.gson.annotations.SerializedName;
 
 public class ReceivedTransferAccountNumber {

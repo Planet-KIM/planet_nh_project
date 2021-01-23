@@ -1,18 +1,20 @@
 package com.example.planetcat_nh2.apis;
 import com.example.planetcat_nh2.models.ConfirmPin;
-import com.example.planetcat_nh2.models.DrawingTransfer;
-import com.example.planetcat_nh2.models.InquireBalance;
-import com.example.planetcat_nh2.models.InquireCreditCardAuthorizationHistory;
-import com.example.planetcat_nh2.models.InquireDepositor;
-import com.example.planetcat_nh2.models.InquireDepositor_Other;
-import com.example.planetcat_nh2.models.InquireExchangeRate;
-import com.example.planetcat_nh2.models.InquireTransactionHistory;
-import com.example.planetcat_nh2.models.Login;
+import com.example.planetcat_nh2.models.P2P.P2PNInvestmentLoanExecutionResultInquiry;
+import com.example.planetcat_nh2.models.TRANSFER.DrawingTransfer;
+import com.example.planetcat_nh2.models.INQUIRE.InquireBalance;
+import com.example.planetcat_nh2.models.INQUIRE.InquireCreditCardAuthorizationHistory;
+import com.example.planetcat_nh2.models.INQUIRE.InquireDepositor;
+import com.example.planetcat_nh2.models.INQUIRE.InquireDepositor_Other;
+import com.example.planetcat_nh2.models.INQUIRE.InquireExchangeRate;
+import com.example.planetcat_nh2.models.INQUIRE.InquireTransactionHistory;
+import com.example.planetcat_nh2.models.USER.Login;
 import com.example.planetcat_nh2.models.P2P.P2PNAccountReceiveInformationList;
+import com.example.planetcat_nh2.models.P2P.P2PNInvestmentPaymentOrder;
 import com.example.planetcat_nh2.models.P2P.P2PNVirtualAccountNumberRequest;
 import com.example.planetcat_nh2.models.PinItem2;
-import com.example.planetcat_nh2.models.ReceivedTransferAccountNumber;
-import com.example.planetcat_nh2.models.ReceivedTransferOtherBank;
+import com.example.planetcat_nh2.models.TRANSFER.ReceivedTransferAccountNumber;
+import com.example.planetcat_nh2.models.TRANSFER.ReceivedTransferOtherBank;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -83,11 +85,13 @@ public interface JsonHandle {
     @POST("P2PNAccountReceiveInformationList.nh")
     Call<P2PNAccountReceiveInformationList> p2PNAccountReceiveInformationList(@Body P2PNAccountReceiveInformationList p2PNAccountReceiveInformationList);
 
-    @Headers("Content-Type: application/json; charset=UTF-8;")
+    @Headers("Content-Type: application/json; charset=UTF-8")
     @POST("P2PNInvestmentPaymentOrder.nh")
     Call<P2PNInvestmentPaymentOrder> p2PNInvestmentPaymentOrder(@Body P2PNInvestmentPaymentOrder p2PNInvestmentPaymentOrder);
 
-
+    @Headers("Content-Type: application/json; charset=UTF-8")
+    @POST("P2PNInvestmentLoanExecutionResultInquiry.nh")
+    Call<P2PNInvestmentLoanExecutionResultInquiry> p2PNInvestmentLoanExecutionResultInquiry(@Body P2PNInvestmentLoanExecutionResultInquiry p2PNInvestmentLoanExecutionResultInquiry);
 
     // 서버에 로그인 하기위한 영역
     @Headers("Content-Type: application/json; charset=UTF-8;")

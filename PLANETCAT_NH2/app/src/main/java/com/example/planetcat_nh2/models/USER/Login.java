@@ -1,4 +1,4 @@
-package com.example.planetcat_nh2.models;
+package com.example.planetcat_nh2.models.USER;
 
 import com.google.gson.annotations.SerializedName;
 

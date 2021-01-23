@@ -1,6 +1,5 @@
 package com.example.planetcat_nh2;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,7 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.planetcat_nh2.apis.JsonHandle;
-import com.example.planetcat_nh2.models.Login;
+import com.example.planetcat_nh2.models.USER.Login;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

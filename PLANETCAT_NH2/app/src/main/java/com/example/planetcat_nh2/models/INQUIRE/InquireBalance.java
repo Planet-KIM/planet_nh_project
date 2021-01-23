@@ -1,5 +1,6 @@
-package com.example.planetcat_nh2.models;
+package com.example.planetcat_nh2.models.INQUIRE;
 
+import com.example.planetcat_nh2.models.Header;
 import com.google.gson.annotations.SerializedName;
 
 //기능 : 핀-어카운트 연결계좌에 대한 잔액을 조회합니다.
