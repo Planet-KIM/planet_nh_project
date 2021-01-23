@@ -1,10 +1,9 @@
-package com.example.planetcat_nh2.models;
+package com.example.planetcat_nh2.models.P2P;
 
+import com.example.planetcat_nh2.models.Header;
 import com.google.gson.annotations.SerializedName;
 
 public class P2PNVirtualAccountNumberRequest {
-
-
 
     private Header Header;
 

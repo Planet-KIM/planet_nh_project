@@ -8,24 +8,14 @@ import com.example.planetcat_nh2.models.InquireDepositor_Other;
 import com.example.planetcat_nh2.models.InquireExchangeRate;
 import com.example.planetcat_nh2.models.InquireTransactionHistory;
 import com.example.planetcat_nh2.models.Login;
-import com.example.planetcat_nh2.models.P2PNVirtualAccountNumberRequest;
-import com.example.planetcat_nh2.models.PinItem;
+import com.example.planetcat_nh2.models.P2P.P2PNAccountReceiveInformationList;
+import com.example.planetcat_nh2.models.P2P.P2PNVirtualAccountNumberRequest;
 import com.example.planetcat_nh2.models.PinItem2;
-import com.example.planetcat_nh2.models.PostItem;
 import com.example.planetcat_nh2.models.ReceivedTransferAccountNumber;
 import com.example.planetcat_nh2.models.ReceivedTransferOtherBank;
-import com.google.gson.JsonObject;
-
-import org.json.JSONObject;
-
-import java.util.HashMap;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
-import retrofit2.http.Field;
-import retrofit2.http.FieldMap;
-import retrofit2.http.FormUrlEncoded;
-import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
@@ -92,6 +82,11 @@ public interface JsonHandle {
     @Headers("Content-Type: application/json; charset=UTF-8")
     @POST("P2PNAccountReceiveInformationList.nh")
     Call<P2PNAccountReceiveInformationList> p2PNAccountReceiveInformationList(@Body P2PNAccountReceiveInformationList p2PNAccountReceiveInformationList);
+
+    @Headers("Content-Type: application/json; charset=UTF-8;")
+    @POST("P2PNInvestmentPaymentOrder.nh")
+    Call<P2PNInvestmentPaymentOrder> p2PNInvestmentPaymentOrder(@Body P2PNInvestmentPaymentOrder p2PNInvestmentPaymentOrder);
+
 
 
     // 서버에 로그인 하기위한 영역

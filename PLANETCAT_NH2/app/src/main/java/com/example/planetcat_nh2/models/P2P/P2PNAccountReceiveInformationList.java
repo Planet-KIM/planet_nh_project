@@ -1,5 +1,6 @@
-package com.example.planetcat_nh2.models;
+package com.example.planetcat_nh2.models.P2P;
 
+import com.example.planetcat_nh2.models.Header;
 import com.google.gson.annotations.SerializedName;
 
 public class P2PNAccountReceiveInformationList {
@@ -59,7 +60,7 @@ public class P2PNAccountReceiveInformationList {
     private String RcvAmt;
     public String getRcvAmt() { return  RcvAmt; }
 
-    
+
     public P2PNAccountReceiveInformationList(Header Header, String P2pCmtmNo, String ChidSqno, String Vran, String Iqds, String Insymd, String Ineymd){
 
         this.Header = Header;
