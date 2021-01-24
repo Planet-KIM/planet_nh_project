@@ -98,6 +98,10 @@ public interface JsonHandle {
     @POST("P2PNInterestRepayment.nh")
     Call<P2PNInterestRepayment> p2PNInterestRepayment(@Body P2PNInterestRepayment p2PNInterestRepayment);
 
+    @Headers("Content-Type: application/json; charset=UTF-8")
+    @POST("P2PNInterestPaymentAccountReceiveResultConfirmation.nh")
+    Call<P2PNInterestPaymentAccountReceiveResultConfirmation> p2PNInterestPaymentAccountReceiveResultConfirmation(@Body P2PNInterestPaymentAccountReceiveResultConfirmation p2PNInterestPaymentAccountReceiveResultConfirmation);
+
     // 서버에 로그인 하기위한 영역
     @Headers("Content-Type: application/json; charset=UTF-8;")
     @POST("/user/login")
