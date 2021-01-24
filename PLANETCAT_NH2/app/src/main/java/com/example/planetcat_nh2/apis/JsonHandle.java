@@ -1,5 +1,6 @@
 package com.example.planetcat_nh2.apis;
 import com.example.planetcat_nh2.models.ConfirmPin;
+import com.example.planetcat_nh2.models.P2P.P2PNInterestPaymentAccountReceiveResultConfirmation;
 import com.example.planetcat_nh2.models.P2P.P2PNInterestRepayment;
 import com.example.planetcat_nh2.models.P2P.P2PNInvestmentLoanExecutionResultInquiry;
 import com.example.planetcat_nh2.models.TRANSFER.DrawingTransfer;
@@ -101,6 +102,10 @@ public interface JsonHandle {
     @Headers("Content-Type: application/json; charset=UTF-8")
     @POST("P2PNInterestPaymentAccountReceiveResultConfirmation.nh")
     Call<P2PNInterestPaymentAccountReceiveResultConfirmation> p2PNInterestPaymentAccountReceiveResultConfirmation(@Body P2PNInterestPaymentAccountReceiveResultConfirmation p2PNInterestPaymentAccountReceiveResultConfirmation);
+
+    @Headers("Content-Type: application/json; charset=UTF-8")
+    @POST("/P2PNInvestmentDepositAmountReturn.nh")
+    Call<P2PNInvestmentDepositAmountReturn> p2PNInvestmentDepositAmountReturn(@Body P2PNInvestmentDepositAmountReturn p2PNInvestmentDepositAmountReturn);
 
     // 서버에 로그인 하기위한 영역
     @Headers("Content-Type: application/json; charset=UTF-8;")
