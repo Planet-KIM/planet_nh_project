@@ -1,5 +1,6 @@
 package com.example.planetcat_nh2.apis;
 import com.example.planetcat_nh2.models.ConfirmPin;
+import com.example.planetcat_nh2.models.GIRO.InquireSewageFarePayment;
 import com.example.planetcat_nh2.models.P2P.P2PNInterestPaymentAccountReceiveResultConfirmation;
 import com.example.planetcat_nh2.models.P2P.P2PNInterestRepayment;
 import com.example.planetcat_nh2.models.P2P.P2PNInvestmentDepositAmountReturn;
@@ -112,6 +113,11 @@ public interface JsonHandle {
     @Headers("Content-Type: application/json; charset=UTF-8")
     @POST("/P2PNInvestmentDepositAmountReturnResultList.nh")
     Call<P2PNInvestmentDepositAmountReturnResultList> p2PNInvestmentDepositAmountReturnResultList(@Body P2PNInvestmentDepositAmountReturnResultList p2PNInvestmentDepositAmountReturnResultList);
+
+    //GIRO
+    @Headers("Content-Type: application/json; charset=UTF-8")
+    @POST("/InquireSewageFarePayment.nh")
+    Call<InquireSewageFarePayment> inquireSewageFarePayment(@Body InquireSewageFarePayment inquireSewageFarePayment);
 
     // 서버에 로그인 하기위한 영역
     @Headers("Content-Type: application/json; charset=UTF-8;")
