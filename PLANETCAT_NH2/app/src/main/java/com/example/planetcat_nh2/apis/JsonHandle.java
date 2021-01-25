@@ -107,17 +107,21 @@ public interface JsonHandle {
     Call<P2PNInterestPaymentAccountReceiveResultConfirmation> p2PNInterestPaymentAccountReceiveResultConfirmation(@Body P2PNInterestPaymentAccountReceiveResultConfirmation p2PNInterestPaymentAccountReceiveResultConfirmation);
 
     @Headers("Content-Type: application/json; charset=UTF-8")
-    @POST("/P2PNInvestmentDepositAmountReturn.nh")
+    @POST("P2PNInvestmentDepositAmountReturn.nh")
     Call<P2PNInvestmentDepositAmountReturn> p2PNInvestmentDepositAmountReturn(@Body P2PNInvestmentDepositAmountReturn p2PNInvestmentDepositAmountReturn);
 
     @Headers("Content-Type: application/json; charset=UTF-8")
-    @POST("/P2PNInvestmentDepositAmountReturnResultList.nh")
+    @POST("P2PNInvestmentDepositAmountReturnResultList.nh")
     Call<P2PNInvestmentDepositAmountReturnResultList> p2PNInvestmentDepositAmountReturnResultList(@Body P2PNInvestmentDepositAmountReturnResultList p2PNInvestmentDepositAmountReturnResultList);
 
     //GIRO
     @Headers("Content-Type: application/json; charset=UTF-8")
-    @POST("/InquireSewageFarePayment.nh")
+    @POST("InquireSewageFarePayment.nh")
     Call<InquireSewageFarePayment> inquireSewageFarePayment(@Body InquireSewageFarePayment inquireSewageFarePayment);
+
+    @Headers("Content-Type: application/json; charset=UTF-8")
+    @POST("SewageFarePayment.nh")
+    Call<SewageFarePayment> sewageFarePayment(@Body SewageFarePayment sewageFarePayment);
 
     // 서버에 로그인 하기위한 영역
     @Headers("Content-Type: application/json; charset=UTF-8;")
